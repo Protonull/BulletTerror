@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bullet Terror</title>
+        <style type="text/css">
+            html, body {
+/*                background-color: #333;*/
+                color: #fff;
+                font-family: helvetica, arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                font-size: 12pt;
+            }
+            #game_screen {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                border: 1px solid #000;
+            }
+        </style>
+        <script>
+            if ( typeof root == "undefined" ) {
+                     if ( typeof process    !== "undefined" ) window.root = process.cwd()  + "/";
+                else if ( typeof __dirname  !== "undefined" ) window.root = __dirname      + "/";
+                else {
+                    window.root = window.top.location.href.split( "/" );
+                    window.root.pop();
+                    window.root = window.root.join( "/" ) + "/";
+                }
+            }
+            else root += "/";
+        </script>
+        <script type="text/javascript" src="./game.min.js"></script>
+    </head>
+    <body>
+        <canvas id="game_screen"></canvas>
+    </body>
+</html>
